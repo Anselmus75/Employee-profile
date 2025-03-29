@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Profile Data</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .logo-container img {
+            width: 80px;
+            height: auto;
+        }
+        .wallpaper {
+            width: 100%;
+            height: auto;
+            max-height: 200px;
+            object-fit: cover;
+        }
+        .container {
+            max-width: 90%;
+            margin: auto;
+            text-align: center;
+        }
+        .login-form input, .login-form button {
+            width: 90%;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="logo3.png" alt="Company Logo 3" class="logo">
+            <img src="logo1.png" alt="Company Logo 1" class="logo">
+        </div>
+        <hr>
+        <h1>AGENSI ANTI DADAH KEBANGSAAN</h1>
+        <h2>NATIONAL ANTI DRUGS AGENCY</h2>
+        <img src="wallpaper.jpg" alt="Company Wallpaper" class="wallpaper">
+        <p class="company-info">The Antidrugs SKUAD is a voluntary entity of the National Anti-drugs Agency. SKUAD is a Malay acronym for anti-drug volunteer whereas NADA refers to the National Anti-Drugs Agency. The Antidrugs SKUAD is a rebranding of volunteers who carry out anti-drug activities in their respective areas or communities.</p>
+        
+        <div class="login-form">
+            <h2>SKUAD AADK</h2>
+            <input type="text" id="userID" placeholder="User ID">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="login()">Login</button>
+        </div>
+    </div>
+
+    <script>
+        function login() {
+            let userID = document.getElementById("userID").value;
+            let password = document.getElementById("password").value;
+            
+            if (userID === "Onetana448" && password === "010586") {
+                window.location.href = "profile.html";
+            } else {
+                alert("Invalid Credentials");
+            }
+        }
+    </script>
+</body>
+</html>
